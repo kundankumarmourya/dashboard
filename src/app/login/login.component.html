@@ -1,20 +1,32 @@
-<section class="login-image-bg">
-  <div class="login-solid-bg ">
-      <div class="loginContentBox" >
-          <div class="login-boxWhite">
-              <div class="logo-box">
-              </div>
-              <div class="row">
-                   <form class="" action="" method="post">
-                        <input type="text" name="" value="" class="input-box" placeholder="">
-                        <input type="password" placeholder="Enter " class="input-box" name="" value="">
-                        <button type="submit" id="btn "  class="btn-block" data-style="expand-left" >
-                           <span>Sign In to</span>
-                        </button>
-
-                   </form>
-              </div>
-          </div>
-      </div>
+<mat-toolbar color="primary"  class="mat-elevation-z2">
+    <button (click)="back()" type="button" mat-button><mat-icon>keyboard_backspace</mat-icon> Back </button>
+</mat-toolbar>
+<section class="login-color-bg bg-blue-light">
+  <div class="login-boxWhite">
+    <mat-card class="mat-elevation-z8">
+        <div class="mat-headline">Login</div>
+        <p>Hello! Log in with your email.</p>
+        <mat-card-content>
+             <form class="" action="" method="post">
+               <mat-form-field appearance="outline"  color="primary">
+                <mat-label>Enter Your Email</mat-label>
+                <input matInput placeholder="hint: email@example">
+                <mat-icon matSuffix>mail</mat-icon>
+               </mat-form-field>
+                <mat-form-field appearance="outline" color="primary">
+                  <mat-label>Enter Your Password</mat-label>
+                  <input matInput placeholder="Hint: password@123" [type]="hide ? 'password' : 'text'">
+                  <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                  <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                  </button>
+                </mat-form-field>
+                <button mat-flat-button color="primary" class="w-100" type="Submit" name="Login">Login</button>
+             </form>
+        </mat-card-content>
+        <mat-card-actions>
+          <p>Don't have an account? <a routerLink="/Registration"  mat-button>Register</a></p>
+        </mat-card-actions>
+    </mat-card>
   </div>
 </section>
+<app-footer></app-footer>

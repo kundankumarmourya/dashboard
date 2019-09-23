@@ -1,0 +1,58 @@
+<mat-toolbar color="primary" class="mat-elevation-z8 back">
+    <button (click)="back()" type="button" mat-button>
+        <mat-icon>keyboard_backspace</mat-icon> Back
+    </button>
+</mat-toolbar>
+<section class="registration-color-bg bg-blue-light">
+    <div class="registration-boxWhite">
+        <mat-card class="mat-elevation-z7">
+            <div class="mat-headline">Registration</div>
+            <p>Hello! Registration in with your email.</p>
+            <mat-card-content>
+                <form class="" action="" method="post">
+                     <mat-form-field appearance="outline" color="primary">
+                         <mat-label>Full Name</mat-label>
+                         <input matInput type="">
+                         <mat-icon matSuffix>account_box</mat-icon>
+                     </mat-form-field>
+                    <mat-form-field appearance="outline" color="primary">
+                        <mat-label>Your Email</mat-label>
+                        <input matInput type="email" >
+                        <mat-icon matSuffix>mail</mat-icon>
+                    </mat-form-field>
+                     <mat-form-field appearance="outline" color="primary">
+                         <mat-label>Contact Number </mat-label>
+                         <input matInput type="number">
+                         <mat-icon matSuffix>phone</mat-icon>
+                    </mat-form-field>
+                    <mat-form-field appearance="outline" color="primary">
+                        <mat-label>Gender</mat-label>
+                        <mat-select>
+                            <mat-option value="Male">Male</mat-option>
+                            <mat-option value="Female">Female</mat-option>
+                            <mat-option value="other">Other</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                    <mat-form-field appearance="outline" color="primary">
+                        <mat-label>Password</mat-label>
+                        <input matInput [type]="hide ? 'password' : 'text'">
+                    </mat-form-field>
+                    
+                    <mat-form-field appearance="outline" color="primary">
+                        <mat-label>Confirm Password</mat-label>
+                        <input matInput  [type]="hide ? 'password' : 'text'">
+                        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                            [attr.aria-pressed]="hide">
+                            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                        </button>
+                    </mat-form-field>
+                    <button mat-flat-button color="primary" class="w-100" type="Submit" name="registration">Registration</button>
+                </form>
+            </mat-card-content>
+            <mat-card-actions>
+                <p>Have an account? <a routerLink="/login"  mat-button>Login</a></p>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+</section>
+<app-footer></app-footer>

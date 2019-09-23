@@ -56,6 +56,7 @@ import { MainPageComponent } from './main-page/main-page.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { LoginComponent } from './login/login.component';
+import { RegistrationComponent } from './registration/registration.component';
 
 
 @NgModule({
@@ -66,6 +67,7 @@ import { LoginComponent } from './login/login.component';
     MainPageComponent,
     SidenavComponent,
     LoginComponent,
+    RegistrationComponent,
   ],
   imports: [
     BrowserModule,

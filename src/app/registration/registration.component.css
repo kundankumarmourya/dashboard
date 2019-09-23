@@ -1,0 +1,30 @@
+.registration-color-bg {
+    width: 100vw;
+    min-height: calc(100vh - 128px);
+    display: flex;
+    background: #3366ff;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    padding: 30px 0;
+}
+.mat-toolbar{
+  z-index: 10;   
+}
+.registration-boxWhite {
+    height: auto;
+    text-align: center;
+    width: 800px;
+    z-index: 1;
+}
+.mat-form-field {
+   -webkit-box-flex: 1;
+   box-flex: 1;
+   -webkit-flex-grow: 1;
+   flex-grow: 1;
+   width: -webkit-calc(50% - 8px);
+   width: calc(50% - 8px);
+}
+.mat-form-field:nth-child(odd) {
+    margin-right: 16px;
+}
