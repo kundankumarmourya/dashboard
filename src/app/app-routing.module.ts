@@ -5,9 +5,10 @@ import {MainPageComponent} from './main-page/main-page.component'
 import { RegistrationComponent} from './registration/registration.component'
 
 const routes: Routes = [
+  { path: '', component: LoginComponent },
   { path: 'login', component: LoginComponent },
-  { path: '', component: MainPageComponent},
-  { path: 'Registration', component: RegistrationComponent},
+  { path: 'home', component: MainPageComponent},
+  { path: 'registration', component: RegistrationComponent},
 
 ];
 

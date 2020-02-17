@@ -1,5 +1,5 @@
 .registration-color-bg {
-    width: 100vw;
+    width: 100%;
     min-height: calc(100vh - 128px);
     display: flex;
     background: #3366ff;
